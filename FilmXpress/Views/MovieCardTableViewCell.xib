@@ -60,7 +60,7 @@
                                         <rect key="frame" x="25" y="44" width="38" height="18"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" red="0.16135719560279718" green="0.859566215034965" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="textColor" red="0.16078431372549018" green="0.85882352941176465" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sun" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EIM-Kp-vJA">
@@ -112,7 +112,7 @@
                                 <rect key="frame" x="274" y="45" width="78" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gs7-uq-GGO">
@@ -139,9 +139,21 @@
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="cardView" destination="vTf-xA-PEd" id="IIH-10-yVS"/>
+                <outlet property="movieFavorite" destination="gs7-uq-GGO" id="U5e-mn-a6x"/>
+                <outlet property="movieName" destination="8zj-ZS-hB7" id="ZNt-8E-8pq"/>
                 <outlet property="moviePoster" destination="ISb-op-Bgg" id="Lim-iH-wjw"/>
+                <outlet property="movieStatus" destination="tfO-af-MI2" id="kOg-1m-j0k"/>
+                <outlet property="movieTime" destination="VJP-Ul-ywz" id="Q7F-sC-6JK"/>
+                <outlet property="movieType" destination="bWN-iR-GGI" id="NMO-cq-o3F"/>
                 <outlet property="scheduleView" destination="kuB-p4-Kyi" id="cZu-9S-DMe"/>
                 <outlet property="statusView" destination="u11-zI-smb" id="K18-z2-CEx"/>
+                <outletCollection property="weekDays" destination="cCf-vm-V3F" collectionClass="NSMutableArray" id="QaV-X6-30U"/>
+                <outletCollection property="weekDays" destination="EIM-Kp-vJA" collectionClass="NSMutableArray" id="xFo-b9-vbQ"/>
+                <outletCollection property="weekDays" destination="e97-Cw-NuM" collectionClass="NSMutableArray" id="hYI-5A-JJ3"/>
+                <outletCollection property="weekDays" destination="pDE-Bb-scE" collectionClass="NSMutableArray" id="xEP-Se-2tm"/>
+                <outletCollection property="weekDays" destination="gD1-GV-9N6" collectionClass="NSMutableArray" id="hJD-2P-dBd"/>
+                <outletCollection property="weekDays" destination="JB0-Ne-Sfa" collectionClass="NSMutableArray" id="sV0-pl-Z1Y"/>
+                <outletCollection property="weekDays" destination="lfV-7s-gTi" collectionClass="NSMutableArray" id="g4V-qF-8fU"/>
             </connections>
             <point key="canvasLocation" x="138.1679389312977" y="46.478873239436624"/>
         </tableViewCell>
