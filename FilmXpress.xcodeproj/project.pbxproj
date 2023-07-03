@@ -13,6 +13,8 @@
 		33CB07A32A52D3F70089078A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33CB07A12A52D3F70089078A /* Main.storyboard */; };
 		33CB07A52A52D3F80089078A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33CB07A42A52D3F80089078A /* Assets.xcassets */; };
 		33CB07A82A52D3F80089078A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33CB07A62A52D3F80089078A /* LaunchScreen.storyboard */; };
+		33CB07B52A531F880089078A /* MovieCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CB07B32A531F880089078A /* MovieCardTableViewCell.swift */; };
+		33CB07B62A531F880089078A /* MovieCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33CB07B42A531F880089078A /* MovieCardTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		33CB07A42A52D3F80089078A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33CB07A72A52D3F80089078A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		33CB07A92A52D3F80089078A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33CB07B32A531F880089078A /* MovieCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCardTableViewCell.swift; sourceTree = "<group>"; };
+		33CB07B42A531F880089078A /* MovieCardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCardTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,8 @@
 		33CB07AF2A52D4EA0089078A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				33CB07B32A531F880089078A /* MovieCardTableViewCell.swift */,
+				33CB07B42A531F880089078A /* MovieCardTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -157,6 +163,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33CB07B62A531F880089078A /* MovieCardTableViewCell.xib in Resources */,
 				33CB07A82A52D3F80089078A /* LaunchScreen.storyboard in Resources */,
 				33CB07A52A52D3F80089078A /* Assets.xcassets in Resources */,
 				33CB07A32A52D3F70089078A /* Main.storyboard in Resources */,
@@ -170,6 +177,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33CB07B52A531F880089078A /* MovieCardTableViewCell.swift in Sources */,
 				33CB07A02A52D3F60089078A /* FilmXpressMoviesViewController.swift in Sources */,
 				33CB079C2A52D3F60089078A /* AppDelegate.swift in Sources */,
 				33CB079E2A52D3F60089078A /* SceneDelegate.swift in Sources */,
