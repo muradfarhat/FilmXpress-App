@@ -28,13 +28,14 @@ class MovieCardTableViewCell: UITableViewCell {
     @IBOutlet weak private var movieType: UILabel!
     @IBOutlet weak private var movieName: UILabel!
     
-    private var days: [String] = []
+    private var days: [String] = ["Sunday", "Friday"]
     
     override func awakeFromNib() {
         super.awakeFromNib()
         self.cardView.layer.cornerRadius = 20
         self.moviePoster.layer.cornerRadius = 20
         self.statusView.layer.cornerRadius = 15
+        self.statusView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
         self.scheduleView.layer.cornerRadius = 15
         
         for day in weekDays {

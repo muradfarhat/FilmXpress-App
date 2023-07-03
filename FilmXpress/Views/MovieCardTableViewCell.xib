@@ -64,7 +64,7 @@
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kuB-p4-Kyi">
                                 <rect key="frame" x="139" y="123" width="224" height="100"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJP-Ul-ywz">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJP-Ul-ywz">
                                         <rect key="frame" x="16" y="8" width="193" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="18" id="Z2Z-qA-hkM"/>
@@ -152,9 +152,9 @@
                                     <constraint firstItem="VJP-Ul-ywz" firstAttribute="leading" secondItem="kuB-p4-Kyi" secondAttribute="leading" constant="16" id="7Wl-9t-MI9"/>
                                     <constraint firstItem="pDE-Bb-scE" firstAttribute="leading" secondItem="e97-Cw-NuM" secondAttribute="trailing" constant="8" id="8dh-Dd-zwM"/>
                                     <constraint firstItem="JB0-Ne-Sfa" firstAttribute="top" secondItem="EIM-Kp-vJA" secondAttribute="bottom" constant="8" id="B12-kU-awE"/>
-                                    <constraint firstItem="cCf-vm-V3F" firstAttribute="leading" secondItem="kuB-p4-Kyi" secondAttribute="leading" constant="24" id="D3s-co-FPZ"/>
+                                    <constraint firstItem="cCf-vm-V3F" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kuB-p4-Kyi" secondAttribute="leading" constant="24" id="D3s-co-FPZ"/>
                                     <constraint firstAttribute="width" constant="224" id="Izz-jz-4Y3"/>
-                                    <constraint firstAttribute="trailing" secondItem="pDE-Bb-scE" secondAttribute="trailing" constant="24" id="K0d-uh-vsa"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="pDE-Bb-scE" secondAttribute="trailing" constant="24" id="K0d-uh-vsa"/>
                                     <constraint firstItem="lfV-7s-gTi" firstAttribute="top" secondItem="e97-Cw-NuM" secondAttribute="bottom" constant="8" id="KuB-rO-l5L"/>
                                     <constraint firstAttribute="bottom" secondItem="JB0-Ne-Sfa" secondAttribute="bottom" constant="14" id="Lfh-CC-Ol3"/>
                                     <constraint firstItem="cCf-vm-V3F" firstAttribute="top" secondItem="VJP-Ul-ywz" secondAttribute="bottom" constant="16" id="Opq-CK-agU"/>
@@ -162,12 +162,12 @@
                                     <constraint firstItem="pDE-Bb-scE" firstAttribute="top" secondItem="VJP-Ul-ywz" secondAttribute="bottom" constant="16" id="bq4-bJ-2oE"/>
                                     <constraint firstItem="lfV-7s-gTi" firstAttribute="leading" secondItem="JB0-Ne-Sfa" secondAttribute="trailing" constant="8" id="cMP-P2-kbf"/>
                                     <constraint firstItem="EIM-Kp-vJA" firstAttribute="leading" secondItem="cCf-vm-V3F" secondAttribute="trailing" constant="8" id="cka-Pb-esX"/>
-                                    <constraint firstItem="gD1-GV-9N6" firstAttribute="leading" secondItem="kuB-p4-Kyi" secondAttribute="leading" constant="49" id="dK3-Tq-z6x"/>
+                                    <constraint firstItem="gD1-GV-9N6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kuB-p4-Kyi" secondAttribute="leading" constant="49" id="dK3-Tq-z6x"/>
                                     <constraint firstAttribute="height" constant="100" id="dx3-Cy-7VK"/>
                                     <constraint firstItem="VJP-Ul-ywz" firstAttribute="top" secondItem="kuB-p4-Kyi" secondAttribute="top" constant="8" id="e4O-wC-ajD"/>
                                     <constraint firstAttribute="trailing" secondItem="VJP-Ul-ywz" secondAttribute="trailing" constant="15" id="fvc-tw-bsL"/>
                                     <constraint firstAttribute="bottom" secondItem="gD1-GV-9N6" secondAttribute="bottom" constant="14" id="ngX-OI-x2z"/>
-                                    <constraint firstAttribute="trailing" secondItem="lfV-7s-gTi" secondAttribute="trailing" constant="45" id="r7e-yV-XtZ"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lfV-7s-gTi" secondAttribute="trailing" constant="45" id="r7e-yV-XtZ"/>
                                     <constraint firstAttribute="bottom" secondItem="lfV-7s-gTi" secondAttribute="bottom" constant="14" id="t7D-gu-ZDM"/>
                                     <constraint firstItem="JB0-Ne-Sfa" firstAttribute="leading" secondItem="gD1-GV-9N6" secondAttribute="trailing" constant="8" id="xsf-Vg-VO6"/>
                                     <constraint firstItem="e97-Cw-NuM" firstAttribute="top" secondItem="VJP-Ul-ywz" secondAttribute="bottom" constant="16" id="zMF-sf-tYW"/>
@@ -188,7 +188,7 @@
                                     <constraint firstAttribute="height" constant="27" id="dhy-YP-Mna"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.39607840779999998" green="0.86274516580000005" blue="0.98431372640000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
