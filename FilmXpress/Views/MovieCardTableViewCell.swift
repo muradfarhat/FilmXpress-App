@@ -35,7 +35,7 @@ class MovieCardTableViewCell: UITableViewCell {
         super.awakeFromNib()
         
         self.setViewsRadius()
-        self.setViewShadow(view: self.cardView, color: self.customColor.cgColor, radius: 20, opacity: 0.3)
+        self.setViewShadow(view: self.cardView, color: self.customColor.cgColor, radius: 20, opacity: 0.25)
         self.setDays()
     }
     
