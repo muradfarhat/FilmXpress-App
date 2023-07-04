@@ -11,19 +11,33 @@ class FilmXpressMoviesViewController: UIViewController, UITableViewDelegate, UIT
     
     @IBOutlet weak var moviesTableView: UITableView!
     private let moviesTableViewViewModel: MoviesTableViewVM = MoviesTableViewVM()
+    private let refreshControl = UIRefreshControl()
     private var isPagination = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         moviesTableView.register(MovieCardTableViewCell.movieCardNib(), forCellReuseIdentifier: MovieCardTableViewCell.identifire)
+        refreshControl.addTarget(self, action: #selector(refreshPage), for: UIControl.Event.valueChanged)
+        refreshControl.tintColor = UIColor.white
+        moviesTableView.addSubview(refreshControl)
         
         self.moviesTableView.tableFooterView = createSpinnerFooter()
         self.moviesTableViewViewModel.fetchMoviesData(pagination: false) {
-            DispatchQueue.main.async {
-                self.moviesTableView.tableFooterView = nil
-                self.moviesTableView.reloadData()
-                self.isPagination = true
+            DispatchQueue.main.async { [weak self] in
+                self?.moviesTableView.tableFooterView = nil
+                self?.moviesTableView.reloadData()
+                self?.isPagination = true
+            }
+        }
+    }
+    
+    // selector method for pull to refresh
+    @objc func refreshPage(send: UIRefreshControl) {
+        self.moviesTableViewViewModel.fetchMoviesData(pagination: false) {
+            DispatchQueue.main.async { [weak self] in
+                self?.moviesTableView.reloadData()
+                self?.refreshControl.endRefreshing()
             }
         }
     }
@@ -47,6 +61,7 @@ class FilmXpressMoviesViewController: UIViewController, UITableViewDelegate, UIT
         let footerView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 100))
         let spinner = UIActivityIndicatorView()
         spinner.center = footerView.center
+        spinner.tintColor = UIColor.white
         footerView.addSubview(spinner)
         spinner.startAnimating()
         return footerView
@@ -59,10 +74,10 @@ class FilmXpressMoviesViewController: UIViewController, UITableViewDelegate, UIT
             if position > (self.moviesTableView.contentSize.height - 100 - scrollView.frame.size.height) {
                 self.moviesTableView.tableFooterView = createSpinnerFooter()
                 
-                self.moviesTableViewViewModel.fetchMoviesData(pagination: true) {
+                self.moviesTableViewViewModel.fetchMoviesData(pagination: true) { [weak self] in
                     DispatchQueue.main.async {
-                        self.moviesTableView.tableFooterView = nil
-                        self.moviesTableView.reloadData()
+                        self?.moviesTableView.tableFooterView = nil
+                        self?.moviesTableView.reloadData()
                     }
                 }
             }

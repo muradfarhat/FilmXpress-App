@@ -12,10 +12,17 @@ class MoviesTableViewVM {
     private(set) var movieCardVMs: [MovieCardViewModel] = []
     private(set) var movieCardModels: [MovieModel] = []
     private var dataPageNumber = 1
+    private var stopPagination = false
     
     func fetchMoviesData(pagination: Bool, completionHandler: @escaping () -> Void) {
-        if pagination {
+        
+        if pagination && !stopPagination {
             dataPageNumber += 1
+        } else if !pagination {
+            dataPageNumber = 1
+            movieCardVMs = []
+            movieCardModels = []
+            stopPagination = false
         }
         
         let movieApi = "https://api.tvmaze.com/shows?page=\(dataPageNumber)"
@@ -32,6 +39,7 @@ class MoviesTableViewVM {
                     completionHandler()
                 case .failure(let error):
                     print(error)
+                    self?.stopPagination = true
                     completionHandler()
                 }
             }
