@@ -63,7 +63,7 @@ class MovieCardTableViewCell: UITableViewCell {
         }
         
         for day in days {
-            switch (day) {
+            switch day {
                 case "Saturday":
                     weekDays[0].textColor = self.customColor
                 case "Sunday":
@@ -84,6 +84,7 @@ class MovieCardTableViewCell: UITableViewCell {
         }
     }
     
+    // Public method to set view data
     func setCardData(movie: MovieCardViewModel) {
         self.movieName.text = movie.movieName
         self.movieType.text = movie.movieType

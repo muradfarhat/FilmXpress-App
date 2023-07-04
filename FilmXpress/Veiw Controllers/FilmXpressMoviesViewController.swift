@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FilmXpressMoviesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FilmXpressMoviesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate {
     
     @IBOutlet weak var moviesTableView: UITableView!
     private let moviesTableViewViewModel: MoviesTableViewVM = MoviesTableViewVM()
@@ -17,7 +17,7 @@ class FilmXpressMoviesViewController: UIViewController, UITableViewDelegate, UIT
         
         moviesTableView.register(MovieCardTableViewCell.movieCardNib(), forCellReuseIdentifier: MovieCardTableViewCell.identifire)
         
-        self.moviesTableViewViewModel.fetchMoviesData {
+        self.moviesTableViewViewModel.fetchMoviesData(pagination: false) {
             DispatchQueue.main.async {
                 self.moviesTableView.reloadData()
             }
@@ -36,6 +36,30 @@ class FilmXpressMoviesViewController: UIViewController, UITableViewDelegate, UIT
         let cell = moviesTableView.dequeueReusableCell(withIdentifier: MovieCardTableViewCell.identifire, for: indexPath) as? MovieCardTableViewCell
         cell?.setCardData(movie: self.moviesTableViewViewModel.movieCardVMs[indexPath.row])
         return cell ?? UITableViewCell()
+    }
+    
+    // methods for pagination
+    private func createSpinnerFooter() -> UIView {
+        let footerView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 100))
+        let spinner = UIActivityIndicatorView()
+        spinner.center = footerView.center
+        footerView.addSubview(spinner)
+        spinner.startAnimating()
+        return footerView
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let position = scrollView.contentOffset.y
+        if position > (self.moviesTableView.contentSize.height - 100 - scrollView.frame.size.height) {
+            self.moviesTableView.tableFooterView = createSpinnerFooter()
+            
+            self.moviesTableViewViewModel.fetchMoviesData(pagination: true) {
+                DispatchQueue.main.async {
+                    self.moviesTableView.tableFooterView = nil
+                    self.moviesTableView.reloadData()
+                }
+            }
+        }
     }
 }
 
