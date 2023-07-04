@@ -16,6 +16,9 @@
 		33CB07B52A531F880089078A /* MovieCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CB07B32A531F880089078A /* MovieCardTableViewCell.swift */; };
 		33CB07B62A531F880089078A /* MovieCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33CB07B42A531F880089078A /* MovieCardTableViewCell.xib */; };
 		33CB07B82A5359470089078A /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CB07B72A5359470089078A /* MovieDetailsViewController.swift */; };
+		33CB07BA2A54159A0089078A /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CB07B92A54159A0089078A /* MovieModel.swift */; };
+		33CB07BC2A5417320089078A /* MovieScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CB07BB2A5417320089078A /* MovieScheduleModel.swift */; };
+		33CB07BE2A541A460089078A /* MovieImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CB07BD2A541A460089078A /* MovieImageModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		33CB07B32A531F880089078A /* MovieCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCardTableViewCell.swift; sourceTree = "<group>"; };
 		33CB07B42A531F880089078A /* MovieCardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCardTableViewCell.xib; sourceTree = "<group>"; };
 		33CB07B72A5359470089078A /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
+		33CB07B92A54159A0089078A /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
+		33CB07BB2A5417320089078A /* MovieScheduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieScheduleModel.swift; sourceTree = "<group>"; };
+		33CB07BD2A541A460089078A /* MovieImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieImageModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +94,9 @@
 		33CB07B02A52D4FB0089078A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				33CB07B92A54159A0089078A /* MovieModel.swift */,
+				33CB07BB2A5417320089078A /* MovieScheduleModel.swift */,
+				33CB07BD2A541A460089078A /* MovieImageModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -180,8 +189,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33CB07BA2A54159A0089078A /* MovieModel.swift in Sources */,
 				33CB07B82A5359470089078A /* MovieDetailsViewController.swift in Sources */,
+				33CB07BC2A5417320089078A /* MovieScheduleModel.swift in Sources */,
 				33CB07B52A531F880089078A /* MovieCardTableViewCell.swift in Sources */,
+				33CB07BE2A541A460089078A /* MovieImageModel.swift in Sources */,
 				33CB07A02A52D3F60089078A /* FilmXpressMoviesViewController.swift in Sources */,
 				33CB079C2A52D3F60089078A /* AppDelegate.swift in Sources */,
 				33CB079E2A52D3F60089078A /* SceneDelegate.swift in Sources */,
