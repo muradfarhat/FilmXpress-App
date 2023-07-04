@@ -11,15 +11,19 @@ class FilmXpressMoviesViewController: UIViewController, UITableViewDelegate, UIT
     
     @IBOutlet weak var moviesTableView: UITableView!
     private let moviesTableViewViewModel: MoviesTableViewVM = MoviesTableViewVM()
+    private var isPagination = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         moviesTableView.register(MovieCardTableViewCell.movieCardNib(), forCellReuseIdentifier: MovieCardTableViewCell.identifire)
         
+        self.moviesTableView.tableFooterView = createSpinnerFooter()
         self.moviesTableViewViewModel.fetchMoviesData(pagination: false) {
             DispatchQueue.main.async {
+                self.moviesTableView.tableFooterView = nil
                 self.moviesTableView.reloadData()
+                self.isPagination = true
             }
         }
     }
@@ -38,7 +42,7 @@ class FilmXpressMoviesViewController: UIViewController, UITableViewDelegate, UIT
         return cell ?? UITableViewCell()
     }
     
-    // methods for pagination
+    // methods for pagination scroll spinner
     private func createSpinnerFooter() -> UIView {
         let footerView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 100))
         let spinner = UIActivityIndicatorView()
@@ -48,15 +52,18 @@ class FilmXpressMoviesViewController: UIViewController, UITableViewDelegate, UIT
         return footerView
     }
     
+    // methods for pagination
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let position = scrollView.contentOffset.y
-        if position > (self.moviesTableView.contentSize.height - 100 - scrollView.frame.size.height) {
-            self.moviesTableView.tableFooterView = createSpinnerFooter()
-            
-            self.moviesTableViewViewModel.fetchMoviesData(pagination: true) {
-                DispatchQueue.main.async {
-                    self.moviesTableView.tableFooterView = nil
-                    self.moviesTableView.reloadData()
+        if isPagination {
+            let position = scrollView.contentOffset.y
+            if position > (self.moviesTableView.contentSize.height - 100 - scrollView.frame.size.height) {
+                self.moviesTableView.tableFooterView = createSpinnerFooter()
+                
+                self.moviesTableViewViewModel.fetchMoviesData(pagination: true) {
+                    DispatchQueue.main.async {
+                        self.moviesTableView.tableFooterView = nil
+                        self.moviesTableView.reloadData()
+                    }
                 }
             }
         }
