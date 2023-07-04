@@ -19,6 +19,6 @@ class MovieScheduleModel: Codable {
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         movieTime = try container.decode(String.self, forKey: .movieTime)
-        movieDays = [try container.decode(String.self, forKey: .movieDays)]
+        movieDays = try container.decode([String].self, forKey: .movieDays)
     }
 }

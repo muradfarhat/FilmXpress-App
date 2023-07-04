@@ -34,7 +34,7 @@ class MovieModel: Codable {
     
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.movieID = Int(try container.decode(String.self, forKey: .movieID))!
+        self.movieID = try container.decode(Int.self, forKey: .movieID)
         self.movieURL = try container.decode(String.self, forKey: .movieURL)
         self.movieName = try container.decode(String.self, forKey: .movieName)
         self.movieType = try container.decode(String.self, forKey: .movieType)

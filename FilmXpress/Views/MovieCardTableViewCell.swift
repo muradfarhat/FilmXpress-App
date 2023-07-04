@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class MovieCardTableViewCell: UITableViewCell {
     
@@ -28,7 +29,7 @@ class MovieCardTableViewCell: UITableViewCell {
     @IBOutlet weak private var movieType: UILabel!
     @IBOutlet weak private var movieName: UILabel!
     
-    private var days: [String] = ["Sunday", "Friday", "Wednesday"]
+    private var days: [String] = []
     private let customColor = UIColor(red: 0x29/255, green: 0xDB/255, blue: 0xFF/255, alpha: 1.0)  // 0x29DBFF
     
     override func awakeFromNib() {
@@ -36,7 +37,6 @@ class MovieCardTableViewCell: UITableViewCell {
         
         self.setViewsRadius()
         self.setViewShadow(view: self.cardView, color: self.customColor.cgColor, radius: 20, opacity: 0.25)
-        self.setDays()
     }
     
     // private method to set radius for card views
@@ -82,5 +82,21 @@ class MovieCardTableViewCell: UITableViewCell {
                     continue
             }
         }
+    }
+    
+    func setCardData(movie: MovieCardViewModel) {
+        self.movieName.text = movie.movieName
+        self.movieType.text = movie.movieType
+        self.movieStatus.text = movie.movieStatus
+        self.movieTime.text = movie.movieTime
+        self.days = movie.movieDays
+        
+        self.moviePoster.sd_setImage(with: movie.movieMediumImage, placeholderImage: nil) { [weak self] (image, error, cacheType, url) in
+            if error != nil {
+                self?.moviePoster.image = UIImage(named: "movieclapper")
+            }
+        }
+        
+        self.setDays()
     }
 }
