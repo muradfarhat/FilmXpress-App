@@ -19,6 +19,8 @@
 		33CB07BA2A54159A0089078A /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CB07B92A54159A0089078A /* MovieModel.swift */; };
 		33CB07BC2A5417320089078A /* MovieScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CB07BB2A5417320089078A /* MovieScheduleModel.swift */; };
 		33CB07BE2A541A460089078A /* MovieImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CB07BD2A541A460089078A /* MovieImageModel.swift */; };
+		33CB07C02A541DDA0089078A /* MovieLinksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CB07BF2A541DDA0089078A /* MovieLinksModel.swift */; };
+		33CB07C22A541E090089078A /* MovieSelfLinkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CB07C12A541E090089078A /* MovieSelfLinkModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		33CB07B92A54159A0089078A /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 		33CB07BB2A5417320089078A /* MovieScheduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieScheduleModel.swift; sourceTree = "<group>"; };
 		33CB07BD2A541A460089078A /* MovieImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieImageModel.swift; sourceTree = "<group>"; };
+		33CB07BF2A541DDA0089078A /* MovieLinksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieLinksModel.swift; sourceTree = "<group>"; };
+		33CB07C12A541E090089078A /* MovieSelfLinkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSelfLinkModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 				33CB07B92A54159A0089078A /* MovieModel.swift */,
 				33CB07BB2A5417320089078A /* MovieScheduleModel.swift */,
 				33CB07BD2A541A460089078A /* MovieImageModel.swift */,
+				33CB07BF2A541DDA0089078A /* MovieLinksModel.swift */,
+				33CB07C12A541E090089078A /* MovieSelfLinkModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -195,7 +201,9 @@
 				33CB07B52A531F880089078A /* MovieCardTableViewCell.swift in Sources */,
 				33CB07BE2A541A460089078A /* MovieImageModel.swift in Sources */,
 				33CB07A02A52D3F60089078A /* FilmXpressMoviesViewController.swift in Sources */,
+				33CB07C22A541E090089078A /* MovieSelfLinkModel.swift in Sources */,
 				33CB079C2A52D3F60089078A /* AppDelegate.swift in Sources */,
+				33CB07C02A541DDA0089078A /* MovieLinksModel.swift in Sources */,
 				33CB079E2A52D3F60089078A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

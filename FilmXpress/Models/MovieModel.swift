@@ -17,6 +17,7 @@ class MovieModel: Codable {
     private(set) var movieImage: MovieImageModel
     private(set) var movieGenres: [String]
     private(set) var movieSummary: String
+    private(set) var movieDataLink: MovieLinksModel
     
     enum CodingKeys: String, CodingKey {
         case movieID = "id"
@@ -28,6 +29,7 @@ class MovieModel: Codable {
         case movieImage = "image"
         case movieGenres = "genres"
         case movieSummary = "summary"
+        case movieDataLink = "_links"
     }
     
     required init(from decoder: Decoder) throws {
@@ -41,5 +43,6 @@ class MovieModel: Codable {
         self.movieImage = try container.decode(MovieImageModel.self, forKey: .movieImage)
         self.movieGenres = try container.decode([String].self, forKey: .movieGenres)
         self.movieSummary = try container.decode(String.self, forKey: .movieSummary)
+        self.movieDataLink = try container.decode(MovieLinksModel.self, forKey: .movieDataLink)
     }
 }
