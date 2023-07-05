@@ -61,6 +61,10 @@ class MovieDetailsSummaryCell: UITableViewCell {
     }
     
     func setCellData(movie: MovieDetailsSummaryVM) {
+        self.movieName.text = movie.movieName
+        self.movieType.text = movie.movieType
+        self.geners = movie.movieGeners!
+        self.summaryLabel.text = movie.movieSummary
         self.setMovieGenres()
     }
 }

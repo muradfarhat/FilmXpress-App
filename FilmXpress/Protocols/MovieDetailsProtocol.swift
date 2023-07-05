@@ -8,5 +8,6 @@
 import Foundation
 
 protocol MovieDetailsProtocol {
-    
+    associatedtype dataType
+    func setCellData(movie: dataType)
 }
