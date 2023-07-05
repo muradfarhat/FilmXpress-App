@@ -15,6 +15,7 @@
 		3337EC732A55A29D0046E81C /* MovieDetailsSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3337EC712A55A29D0046E81C /* MovieDetailsSummaryCell.swift */; };
 		3337EC742A55A29D0046E81C /* MovieDetailsSummaryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3337EC722A55A29D0046E81C /* MovieDetailsSummaryCell.xib */; };
 		3337EC772A55A3CC0046E81C /* MovieDetailsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3337EC762A55A3CC0046E81C /* MovieDetailsProtocol.swift */; };
+		3337EC792A55A5150046E81C /* MovieDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3337EC782A55A5150046E81C /* MovieDetailsModel.swift */; };
 		33CB079C2A52D3F60089078A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CB079B2A52D3F60089078A /* AppDelegate.swift */; };
 		33CB079E2A52D3F60089078A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CB079D2A52D3F60089078A /* SceneDelegate.swift */; };
 		33CB07A02A52D3F60089078A /* FilmXpressMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CB079F2A52D3F60089078A /* FilmXpressMoviesViewController.swift */; };
@@ -44,6 +45,7 @@
 		3337EC712A55A29D0046E81C /* MovieDetailsSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsSummaryCell.swift; sourceTree = "<group>"; };
 		3337EC722A55A29D0046E81C /* MovieDetailsSummaryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailsSummaryCell.xib; sourceTree = "<group>"; };
 		3337EC762A55A3CC0046E81C /* MovieDetailsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsProtocol.swift; sourceTree = "<group>"; };
+		3337EC782A55A5150046E81C /* MovieDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsModel.swift; sourceTree = "<group>"; };
 		33CB07982A52D3F60089078A /* FilmXpress.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FilmXpress.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33CB079B2A52D3F60089078A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33CB079D2A52D3F60089078A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				33CB07B92A54159A0089078A /* MovieModel.swift */,
+				3337EC782A55A5150046E81C /* MovieDetailsModel.swift */,
 				33CB07BB2A5417320089078A /* MovieScheduleModel.swift */,
 				33CB07BD2A541A460089078A /* MovieImageModel.swift */,
 				33CB07BF2A541DDA0089078A /* MovieLinksModel.swift */,
@@ -264,6 +267,7 @@
 				3337EC702A55A2550046E81C /* MovieDetailsSummaryVM.swift in Sources */,
 				33CB07C02A541DDA0089078A /* MovieLinksModel.swift in Sources */,
 				33CB079E2A52D3F60089078A /* SceneDelegate.swift in Sources */,
+				3337EC792A55A5150046E81C /* MovieDetailsModel.swift in Sources */,
 				3337EC772A55A3CC0046E81C /* MovieDetailsProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

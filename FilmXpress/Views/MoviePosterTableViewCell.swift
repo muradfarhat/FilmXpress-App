@@ -15,8 +15,8 @@ class MoviePosterTableViewCell: UITableViewCell {
         return UINib(nibName: "MoviePosterTableViewCell", bundle: nil)
     }
 
-    @IBOutlet weak var moviePlayButton: UIButton!
-    @IBOutlet weak var moviePoster: UIImageView!
+    @IBOutlet weak private var moviePlayButton: UIButton!
+    @IBOutlet weak private var moviePoster: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
