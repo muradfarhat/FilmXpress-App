@@ -17,8 +17,8 @@ class MovieDetailsViewController: UIViewController, UITableViewDelegate, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.movieDetailsTableView.register(MoviePosterTableViewCell.posterCellNib(), forCellReuseIdentifier: MoviePosterTableViewCell.identifire)
         self.movieDetailsTableView.register(MovieDetailsSummaryCell.summaryCellNib(), forCellReuseIdentifier: MovieDetailsSummaryCell.identifire)
+        self.movieDetailsTableView.register(MoviePosterTableViewCell.posterCellNib(), forCellReuseIdentifier: MoviePosterTableViewCell.identifire)
         
         self.movieTableViewVM.fetchMovieData(link: selectedMovieLink!) {
             DispatchQueue.main.async { [weak self] in
@@ -28,7 +28,7 @@ class MovieDetailsViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return self.movieTableViewVM.movieDetailsCellsVM.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -36,10 +36,12 @@ class MovieDetailsViewController: UIViewController, UITableViewDelegate, UITable
             let cell = self.movieDetailsTableView.dequeueReusableCell(withIdentifier: MoviePosterTableViewCell.identifire, for: indexPath) as? MoviePosterTableViewCell
             cell?.setCellData(movie: posterCell)
             return cell ?? UITableViewCell()
-        } else {
+        } else if let summaryCell = self.movieTableViewVM.movieDetailsCellsVM[indexPath.row] as? MovieDetailsSummaryVM {
             let cell = self.movieDetailsTableView.dequeueReusableCell(withIdentifier: MovieDetailsSummaryCell.identifire, for: indexPath) as? MovieDetailsSummaryCell
-            cell?.setCellData(movie: self.movieTableViewVM.movieDetailsCellsVM[indexPath.row] as! MovieDetailsSummaryVM)
+            cell?.setCellData(movie: summaryCell)
             return cell ?? UITableViewCell()
+        } else {
+            return UITableViewCell()
         }
     }
 }

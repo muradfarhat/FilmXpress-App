@@ -25,10 +25,9 @@ class MoviePosterTableViewCell: UITableViewCell {
     func setCellData(movie: MovieDetailsPosterVM) {
         self.moviePoster.sd_setImage(with: movie.moviePoster, placeholderImage: nil) { [weak self] (image, error, cacheType, url) in
             if error != nil {
-                self?.moviePoster.image = UIImage(named: "RealMadrid")
+                self?.moviePoster.image = UIImage(named: "movieclapper")
             }
         }
-        
         let attributedString = NSAttributedString(string: "Visit Website", attributes: [.link: movie.movieLink!])
         self.moviePlayButton.setAttributedTitle(attributedString, for: .normal)
         self.moviePlayButton.addTarget(self, action: #selector(linkClicked(_:)), for: .touchUpInside)

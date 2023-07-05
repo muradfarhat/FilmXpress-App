@@ -23,7 +23,7 @@ class MovieDetailsModel: Codable {
         case movieType = "type"
         case movieImage = "image"
         case movieGenres = "genres"
-        case movieSummary = "ummary"
+        case movieSummary = "summary"
     }
     
     required init(from decoder: Decoder) throws {

@@ -44,6 +44,14 @@ class FilmXpressMoviesViewController: UIViewController, UITableViewDelegate, UIT
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         moviesTableView.deselectRow(at: indexPath, animated: true)
+        
+        let selectedItem = self.moviesTableViewViewModel.movieCardModels[indexPath.row]
+                
+        let movieDescriptionVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MovieDetailsViewController") as? MovieDetailsViewController
+                
+        movieDescriptionVC?.selectedMovieLink = selectedItem.movieDataLink.movieSelfLink.movieHref
+                
+        navigationController?.pushViewController(movieDescriptionVC ?? MovieDetailsViewController(), animated: true)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
