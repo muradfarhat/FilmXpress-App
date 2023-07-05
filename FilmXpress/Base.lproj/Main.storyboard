@@ -42,6 +42,40 @@
             </objects>
             <point key="canvasLocation" x="139.69465648854961" y="3.5211267605633805"/>
         </scene>
+        <!--Movie Details View Controller-->
+        <scene sceneID="628-yd-jHf">
+            <objects>
+                <viewController id="WCd-0M-rhV" customClass="MovieDetailsViewController" customModule="FilmXpress" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wA0-3s-lc6">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="560" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="JuO-ZJ-KoB">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="WCd-0M-rhV" id="2lx-wg-wLt"/>
+                                    <outlet property="delegate" destination="WCd-0M-rhV" id="Y7g-dK-jHn"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pdZ-i7-vDW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JuO-ZJ-KoB" firstAttribute="top" secondItem="wA0-3s-lc6" secondAttribute="top" id="I38-qN-guv"/>
+                            <constraint firstItem="JuO-ZJ-KoB" firstAttribute="trailing" secondItem="pdZ-i7-vDW" secondAttribute="trailing" id="MMh-0S-gVV"/>
+                            <constraint firstItem="JuO-ZJ-KoB" firstAttribute="leading" secondItem="pdZ-i7-vDW" secondAttribute="leading" id="P6U-6f-HSQ"/>
+                            <constraint firstAttribute="bottom" secondItem="JuO-ZJ-KoB" secondAttribute="bottom" id="xgO-uX-sOu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="movieDetailsTableView" destination="JuO-ZJ-KoB" id="jee-V9-ep0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aiv-si-rw3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1084.7328244274809" y="13.380281690140846"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">

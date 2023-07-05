@@ -9,6 +9,8 @@ import UIKit
 
 class MovieDetailsViewController: UIViewController {
     
+    @IBOutlet weak var movieDetailsTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
