@@ -18,6 +18,7 @@ class FilmXpressMoviesViewController: UIViewController, UITableViewDelegate, UIT
         super.viewDidLoad()
         
         moviesTableView.register(MovieCardTableViewCell.movieCardNib(), forCellReuseIdentifier: MovieCardTableViewCell.identifire)
+        
         refreshControl.addTarget(self, action: #selector(refreshPage), for: UIControl.Event.valueChanged)
         refreshControl.tintColor = UIColor.white
         moviesTableView.addSubview(refreshControl)

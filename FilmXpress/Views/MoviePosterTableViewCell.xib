@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -25,11 +26,12 @@
                         </constraints>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7j-LX-GVR">
-                        <rect key="frame" x="138" y="449" width="117" height="45"/>
+                        <rect key="frame" x="138" y="473" width="117" height="45"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="45" id="jRC-AR-JGZ"/>
-                            <constraint firstAttribute="width" constant="117" id="sQp-qE-B3h"/>
+                            <constraint firstAttribute="width" constant="117" id="a6O-SN-mBC"/>
+                            <constraint firstAttribute="height" constant="45" id="y57-e3-QUq"/>
                         </constraints>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="filled" imagePlacement="leading" title="Play" imagePadding="10" cornerStyle="capsule" titleAlignment="trailing">
                             <imageReference key="image" image="play.fill" catalog="system" symbolScale="default"/>
@@ -40,11 +42,11 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="izx-gm-bfD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="5In-dX-6Fz"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="a7j-LX-GVR" secondAttribute="bottom" constant="55" id="BIo-sj-y2Q"/>
-                    <constraint firstItem="a7j-LX-GVR" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="CTc-d7-cAI"/>
+                    <constraint firstItem="a7j-LX-GVR" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="bTT-Ep-fo1"/>
                     <constraint firstItem="izx-gm-bfD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="fGw-GK-Zhe"/>
                     <constraint firstAttribute="trailing" secondItem="izx-gm-bfD" secondAttribute="trailing" id="szs-qx-eT3"/>
                     <constraint firstAttribute="bottom" secondItem="izx-gm-bfD" secondAttribute="bottom" id="tG9-JE-Amp"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="a7j-LX-GVR" secondAttribute="bottom" constant="31" id="xC5-uJ-9np"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -54,13 +56,6 @@
             </connections>
             <point key="canvasLocation" x="138.1679389312977" y="19.718309859154932"/>
         </tableViewCell>
-        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="3kE-Ro-TzZ">
-            <rect key="frame" x="0.0" y="0.0" width="75" height="35"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <state key="normal" title="Button"/>
-            <buttonConfiguration key="configuration" style="plain" title="Button"/>
-            <point key="canvasLocation" x="717" y="-215"/>
-        </button>
     </objects>
     <resources>
         <image name="play.fill" catalog="system" width="117" height="128"/>

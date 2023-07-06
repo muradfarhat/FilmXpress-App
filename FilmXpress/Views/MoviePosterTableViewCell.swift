@@ -20,6 +20,8 @@ class MoviePosterTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        self.moviePlayButton.tintColor = UIColor.black
     }
     
     func setCellData(movie: MovieDetailsPosterVM) {
@@ -28,7 +30,7 @@ class MoviePosterTableViewCell: UITableViewCell {
                 self?.moviePoster.image = UIImage(named: "movieclapper")
             }
         }
-        let attributedString = NSAttributedString(string: "Visit Website", attributes: [.link: movie.movieLink!])
+        let attributedString = NSAttributedString(string: "Play", attributes: [.link: movie.movieLink!, .foregroundColor: UIColor.black])
         self.moviePlayButton.setAttributedTitle(attributedString, for: .normal)
         self.moviePlayButton.addTarget(self, action: #selector(linkClicked(_:)), for: .touchUpInside)
 

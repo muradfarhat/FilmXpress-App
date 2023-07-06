@@ -21,7 +21,7 @@ class MovieDetailsSummaryCell: UITableViewCell {
     @IBOutlet private var genersLabels: Array<UILabel>!
     @IBOutlet weak var summaryLabel: UILabel!
     
-    private var geners: [String] = ["Murad", "Farhat", "Murad", "Farhat", "Murad", "Farhat"]
+    private var geners: [String] = []
     private let customBlueColor = UIColor(red: 0x29/255, green: 0xDB/255, blue: 0xFF/255, alpha: 1.0)  // 0x29DBFF
     private let customGrayColor = UIColor(red: 0x2A/255, green: 0x2A/255, blue: 0x28/255, alpha: 1.0)  // 0x2A2A28
     
