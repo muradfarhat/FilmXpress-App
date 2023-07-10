@@ -12,7 +12,7 @@ class MovieDetailsViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var movieDetailsTableView: UITableView!
     private let movieTableViewVM: MovieDetailsTableViewVM = MovieDetailsTableViewVM()
     
-    var selectedMovieLink: String?
+    var selectedMovieID: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +20,7 @@ class MovieDetailsViewController: UIViewController, UITableViewDelegate, UITable
         self.movieDetailsTableView.register(MovieDetailsSummaryCell.summaryCellNib(), forCellReuseIdentifier: MovieDetailsSummaryCell.identifire)
         self.movieDetailsTableView.register(MoviePosterTableViewCell.posterCellNib(), forCellReuseIdentifier: MoviePosterTableViewCell.identifire)
         
-        self.movieTableViewVM.fetchMovieData(link: selectedMovieLink!) {
+        self.movieTableViewVM.fetchMovieData(id: selectedMovieID!) {
             DispatchQueue.main.async { [weak self] in
                 self?.movieDetailsTableView.reloadData()
             }

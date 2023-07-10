@@ -50,7 +50,7 @@ class FilmXpressMoviesViewController: UIViewController, UITableViewDelegate, UIT
                 
         let movieDescriptionVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MovieDetailsViewController") as? MovieDetailsViewController
                 
-        movieDescriptionVC?.selectedMovieLink = selectedItem.movieDataLink.movieSelfLink.movieHref
+        movieDescriptionVC?.selectedMovieID = selectedItem.movieID
                 
         navigationController?.pushViewController(movieDescriptionVC ?? MovieDetailsViewController(), animated: true)
     }
