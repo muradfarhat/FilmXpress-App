@@ -14,10 +14,12 @@ protocol EndPoint {
     // api.tvmaze.com
     var baseURL: String { get }
     
+    // /shows or /shows/
     var path: String { get }
     
+    // ?page="page_num" or nil
     var parameters: [URLQueryItem]? { get }
     
-    // GET
+    // HTTPMethod: GET
     var method: String { get }
 }

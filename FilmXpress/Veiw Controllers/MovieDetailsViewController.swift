@@ -16,6 +16,7 @@ class MovieDetailsViewController: UIViewController, UITableViewDelegate, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
         self.movieDetailsTableView.register(MovieDetailsSummaryCell.summaryCellNib(), forCellReuseIdentifier: MovieDetailsSummaryCell.identifire)
         self.movieDetailsTableView.register(MoviePosterTableViewCell.posterCellNib(), forCellReuseIdentifier: MoviePosterTableViewCell.identifire)

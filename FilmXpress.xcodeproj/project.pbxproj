@@ -85,14 +85,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		331A2A052A5B786F00E15E80 /* Network */ = {
+		331A2A052A5B786F00E15E80 /* Network Layer */ = {
 			isa = PBXGroup;
 			children = (
 				331A2A062A5B788500E15E80 /* EndPoint.swift */,
 				331A2A082A5BE8C800E15E80 /* MoviesEndPoint.swift */,
 				331A2A0A2A5BEC1100E15E80 /* NetworkEngine.swift */,
 			);
-			path = Network;
+			path = "Network Layer";
 			sourceTree = "<group>";
 		};
 		3337EC752A55A3A20046E81C /* Protocols */ = {
@@ -122,7 +122,7 @@
 		33CB079A2A52D3F60089078A /* FilmXpress */ = {
 			isa = PBXGroup;
 			children = (
-				331A2A052A5B786F00E15E80 /* Network */,
+				331A2A052A5B786F00E15E80 /* Network Layer */,
 				3337EC752A55A3A20046E81C /* Protocols */,
 				33CB07B12A52D5070089078A /* View Models */,
 				33CB07B02A52D4FB0089078A /* Models */,

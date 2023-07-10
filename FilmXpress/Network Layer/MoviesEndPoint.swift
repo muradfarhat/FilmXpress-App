@@ -21,9 +21,9 @@ enum MoviesEndPoint: EndPoint {
     
     var path: String {
         switch self {
-        case .getMoviesDataPage(let api, let page):
+        case .getMoviesDataPage(let api, let movieID):
             if api != nil {
-                return "/shows/\(page)"
+                return "/shows/\(movieID)"
             } else {
                 return "/shows"
             }
@@ -32,11 +32,11 @@ enum MoviesEndPoint: EndPoint {
     
     var parameters: [URLQueryItem]? {
         switch self {
-        case .getMoviesDataPage(let api, let page):
+        case .getMoviesDataPage(let api, let moviesPage):
             if api != nil {
                 return nil
             } else {
-                return [URLQueryItem(name: "page", value: "\(page)")]
+                return [URLQueryItem(name: "page", value: "\(moviesPage)")]
             }
         }
     }

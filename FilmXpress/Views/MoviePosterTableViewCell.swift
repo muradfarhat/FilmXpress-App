@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MoviePosterTableViewCell: UITableViewCell {
+class MoviePosterTableViewCell: UITableViewCell, UIScrollViewDelegate {
     
     static let identifire = "MoviePosterTableViewCell"
     
@@ -42,6 +42,4 @@ class MoviePosterTableViewCell: UITableViewCell {
         }
         UIApplication.shared.open(link)
     }
-
-    
 }

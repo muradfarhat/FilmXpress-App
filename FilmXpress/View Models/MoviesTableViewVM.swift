@@ -12,13 +12,12 @@ class MoviesTableViewVM {
     private(set) var movieCardVMs: [MovieCardViewModel] = []
     private(set) var movieCardModels: [MovieModel] = []
     private var dataPageNumber = 1
-    private var stopPagination = false
     
     func fetchMoviesData(pagination: Bool, completionHandler: @escaping () -> Void) {
         
-        if pagination && !stopPagination {
+        if pagination {
             dataPageNumber += 1
-        } else if !pagination {
+        } else {
             dataPageNumber = 1
             movieCardVMs = []
             movieCardModels = []
