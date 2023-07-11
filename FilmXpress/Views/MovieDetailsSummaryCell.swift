@@ -18,7 +18,6 @@ class MovieDetailsSummaryCell: UITableViewCell {
     @IBOutlet weak private var movieType: UILabel!
     @IBOutlet weak private var movieName: UILabel!
     @IBOutlet weak private var genersView: UIView!
-    @IBOutlet private var genersLabels: Array<UILabel>!
     @IBOutlet weak var summaryLabel: UILabel!
     
     private var geners: [String] = []
@@ -30,8 +29,6 @@ class MovieDetailsSummaryCell: UITableViewCell {
         
         self.layer.cornerRadius = 20
         self.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-        
-        self.setMovieGenres()
     }
     
     private func setMovieGenres() {

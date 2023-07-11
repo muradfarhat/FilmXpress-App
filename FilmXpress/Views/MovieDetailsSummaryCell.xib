@@ -45,7 +45,7 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summary" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K0R-sM-Ler">
-                        <rect key="frame" x="20" y="217" width="353" height="167"/>
+                        <rect key="frame" x="20" y="217" width="353" height="18"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="353" id="6Xr-iv-Frv"/>
                         </constraints>
@@ -55,7 +55,7 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottomMargin" secondItem="K0R-sM-Ler" secondAttribute="bottom" constant="10" id="102-al-XYe"/>
+                    <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="K0R-sM-Ler" secondAttribute="bottom" constant="30" id="102-al-XYe"/>
                     <constraint firstItem="hAu-dZ-Gtp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="CI4-Sq-4eT"/>
                     <constraint firstItem="g7X-vj-bLM" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="MdG-uQ-gvG"/>
                     <constraint firstItem="K0R-sM-Ler" firstAttribute="top" secondItem="g7X-vj-bLM" secondAttribute="bottom" constant="17" id="U3s-wq-Ioz"/>

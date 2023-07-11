@@ -48,7 +48,10 @@ class NetworkEngine {
         dataTask.resume()
     }
     
-    // overload method to return a single model
+    /// Overload method to return a single model
+    /// - Parameters:
+    ///   - movieEndPoint: <#movieEndPoint description#>
+    ///   - completionHandler: <#completionHandler description#>
     class func request<T: Codable>(movieEndPoint: EndPoint, completionHandler: @escaping (Result<T, Error>) -> Void) {
         
         var urlComponents = URLComponents()
