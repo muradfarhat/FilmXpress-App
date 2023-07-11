@@ -10,7 +10,7 @@ import Foundation
 class NetworkEngine {
     
     
-    // overlaode methode to return an array of models
+    // overlaod methode to return an array of models
     class func request<T: Codable>(movieEndPoint: EndPoint, completionHandler: @escaping (Result<[T], Error>) -> Void) {
         
         var urlComponents = URLComponents()
