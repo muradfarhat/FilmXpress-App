@@ -12,7 +12,7 @@ class CoreDataManager {
     static let shared = CoreDataManager() // Singleton instance
         
     lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "FavoriteMovies")
+        let container = NSPersistentContainer(name: "FavoriteMovieEntity")
         container.loadPersistentStores { (_, error) in
             if let error = error as NSError? {
                 fatalError("Failed to load persistent stores: \(error), \(error.userInfo)")

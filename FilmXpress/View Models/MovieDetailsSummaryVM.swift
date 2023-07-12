@@ -13,12 +13,12 @@ class MovieDetailsSummaryVM: MovieDetailsProtocol {
     private(set) var movieGeners: [String]?
     private(set) var movieSummary: String?
     
-    typealias dataType = MovieDetailsModel
+    typealias dataType = MovieModel
     
-    func setCellData(movie: MovieDetailsModel) {
-        self.movieName = movie.movieName
-        self.movieType = movie.movieType
-        self.movieGeners = movie.movieGenres
-        self.movieSummary = movie.movieSummary
+    func setCellData(movie: dataType) {
+        self.movieName = movie.name
+        self.movieType = movie.type
+        self.movieGeners = movie.genres
+        self.movieSummary = movie.summary
     }
 }

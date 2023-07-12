@@ -10,11 +10,11 @@ import Alamofire
 
 class MovieDetailsTableViewVM {
     private(set) var movieDetailsCellsVM: [any MovieDetailsProtocol] = []
-    private(set) var movieDetailsModel: MovieDetailsModel?
+    private(set) var movieDetailsModel: MovieModel?
     
     func fetchMovieData(id: Int, completionHandler: @escaping () -> Void) {
         
-        NetworkEngine.request(movieEndPoint: MoviesEndPoint.getMoviesDataPage(api: "movie", page: id)) { [weak self] (result: Result<MovieDetailsModel, Error>) in
+        NetworkEngine.request(movieEndPoint: MoviesEndPoint.getMoviesDataPage(api: "movie", page: id)) { [weak self] (result: Result<MovieModel, Error>) in
             
             switch result {
                 case .success(let data):

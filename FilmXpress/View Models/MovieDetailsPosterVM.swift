@@ -12,11 +12,11 @@ class MovieDetailsPosterVM: MovieDetailsProtocol {
     private(set) var moviePoster: URL?
     private(set) var movieLink: URL?
     
-    typealias dataType = MovieDetailsModel
+    typealias dataType = MovieModel
     
-    func setCellData(movie: MovieDetailsModel) {
+    func setCellData(movie: dataType) {
         self.moviePoster = URL(string: movie.movieImage.movieOriginalImage)
-        self.movieLink = URL(string: movie.movieURL)
+        self.movieLink = URL(string: movie.url)
     }
     
 }
