@@ -20,11 +20,9 @@ class MovieCardTableViewCell: UITableViewCell {
     @IBOutlet weak private var cardView: UIView!
     @IBOutlet weak private var statusView: UIView!
     @IBOutlet weak private var scheduleView: UIView!
-    
     @IBOutlet private var weekDays: Array<UILabel>!
-    
+    @IBOutlet weak private var movieFav: UIButton!
     @IBOutlet weak private var movieTime: UILabel!
-    @IBOutlet weak private var movieFavorite: UIImageView!
     @IBOutlet weak private var movieStatus: UILabel!
     @IBOutlet weak private var movieType: UILabel!
     @IBOutlet weak private var movieName: UILabel!
@@ -37,6 +35,10 @@ class MovieCardTableViewCell: UITableViewCell {
         
         self.setViewsRadius()
         self.setViewShadow(view: self.cardView, color: self.customColor.cgColor, radius: 20, opacity: 0.25)
+    }
+    
+    
+    @IBAction func movieFavorite(_ sender: Any) {
     }
     
     // private method to set radius for card views

@@ -44,5 +44,4 @@ enum MoviesEndPoint: EndPoint {
     var method: String {
         return "GET"
     }
-
 }

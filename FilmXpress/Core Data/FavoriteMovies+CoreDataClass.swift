@@ -1,0 +1,15 @@
+//
+//  FavoriteMovies+CoreDataClass.swift
+//  FilmXpress
+//
+//  Created by Murad Farhat on 12/07/2023.
+//
+//
+
+import Foundation
+import CoreData
+
+@objc(FavoriteMovies)
+public class FavoriteMovies: NSManagedObject {
+
+}

@@ -10,7 +10,10 @@ import Foundation
 class NetworkEngine {
     
     
-    // overlaod methode to return an array of models
+    /// overlaod methode to return an array of models
+    /// - Parameters:
+    ///   - movieEndPoint: movieEndPoint description
+    ///   - completionHandler: completionHandler description
     class func request<T: Codable>(movieEndPoint: EndPoint, completionHandler: @escaping (Result<[T], Error>) -> Void) {
         
         var urlComponents = URLComponents()
@@ -50,8 +53,8 @@ class NetworkEngine {
     
     /// Overload method to return a single model
     /// - Parameters:
-    ///   - movieEndPoint: <#movieEndPoint description#>
-    ///   - completionHandler: <#completionHandler description#>
+    ///   - movieEndPoint: movieEndPoint
+    ///   - completionHandler: completionHandler description
     class func request<T: Codable>(movieEndPoint: EndPoint, completionHandler: @escaping (Result<T, Error>) -> Void) {
         
         var urlComponents = URLComponents()

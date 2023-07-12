@@ -22,4 +22,6 @@ protocol EndPoint {
     
     // HTTPMethod: GET
     var method: String { get }
+    
+    
 }
