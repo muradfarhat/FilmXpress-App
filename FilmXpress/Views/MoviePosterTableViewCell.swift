@@ -30,7 +30,7 @@ class MoviePosterTableViewCell: UITableViewCell, UIScrollViewDelegate {
                 self?.moviePoster.image = UIImage(named: "movieclapper")
             }
         }
-        let attributedString = NSAttributedString(string: "Play", attributes: [.link: movie.movieLink!, .foregroundColor: UIColor.black])
+        let attributedString = NSAttributedString(string: NSLocalizedString("play", comment: "Play button tilte"), attributes: [.link: movie.movieLink!, .foregroundColor: UIColor.black])
         self.moviePlayButton.setAttributedTitle(attributedString, for: .normal)
         self.moviePlayButton.addTarget(self, action: #selector(linkClicked(_:)), for: .touchUpInside)
 

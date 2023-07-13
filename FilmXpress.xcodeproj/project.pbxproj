@@ -39,6 +39,7 @@
 		33CB07C62A5427A70089078A /* MovieCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CB07C52A5427A70089078A /* MovieCardViewModel.swift */; };
 		33CB07C92A5428780089078A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 33CB07C82A5428780089078A /* Alamofire */; };
 		33CB07CC2A5428A90089078A /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 33CB07CB2A5428A90089078A /* SDWebImage */; };
+		33CCC92D2A600DDC00BF3683 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 33CCC92F2A600DDC00BF3683 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,10 @@
 		33CB07BD2A541A460089078A /* MovieImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieImageModel.swift; sourceTree = "<group>"; };
 		33CB07C32A54208C0089078A /* MoviesTableViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewVM.swift; sourceTree = "<group>"; };
 		33CB07C52A5427A70089078A /* MovieCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCardViewModel.swift; sourceTree = "<group>"; };
+		33CCC9292A600D9800BF3683 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		33CCC92A2A600D9800BF3683 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		33CCC92E2A600DDC00BF3683 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		33CCC9302A600DF500BF3683 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +155,7 @@
 				33CB07A62A52D3F80089078A /* LaunchScreen.storyboard */,
 				33CB07A92A52D3F80089078A /* Info.plist */,
 				3393B8A22A5F1923004EC553 /* FavoriteMovies.xcdatamodeld */,
+				33CCC92F2A600DDC00BF3683 /* Localizable.strings */,
 			);
 			path = FilmXpress;
 			sourceTree = "<group>";
@@ -245,6 +251,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = 33CB078F2A52D3F60089078A;
 			packageReferences = (
@@ -268,6 +275,7 @@
 				3337EC742A55A29D0046E81C /* MovieDetailsSummaryCell.xib in Resources */,
 				3337EC6A2A559DDF0046E81C /* MoviePosterTableViewCell.xib in Resources */,
 				33CB07B62A531F880089078A /* MovieCardTableViewCell.xib in Resources */,
+				33CCC92D2A600DDC00BF3683 /* Localizable.strings in Resources */,
 				33CB07A82A52D3F80089078A /* LaunchScreen.storyboard in Resources */,
 				33CB07A52A52D3F80089078A /* Assets.xcassets in Resources */,
 				33CB07A32A52D3F70089078A /* Main.storyboard in Resources */,
@@ -315,6 +323,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				33CB07A22A52D3F70089078A /* Base */,
+				33CCC9292A600D9800BF3683 /* ar */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -323,8 +332,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				33CB07A72A52D3F80089078A /* Base */,
+				33CCC92A2A600D9800BF3683 /* ar */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		33CCC92F2A600DDC00BF3683 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				33CCC92E2A600DDC00BF3683 /* ar */,
+				33CCC9302A600DF500BF3683 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -334,6 +353,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -394,6 +414,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
